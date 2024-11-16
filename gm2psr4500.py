@@ -100,14 +100,14 @@ InstrumentLUT = [
     92, # 79 Whistle                = 54/23 Whistle
     89, # 80 Ocarina                = 54 Whistle - 89 Ocarina
     # Synth Lead
-    98, # 81 Lead 1 (square)        = 75 Hollow Synth   - 98 Music Saw
-    98, # 82 Lead 2 (sawtooth)      = 75 Hollow Synth   - 98 Music Saw
-    98, # 83 Lead 3 (calliope)      = 75 Hollow Synth   - 98 Music Saw
-    98, # 84 Lead 4 (chiff)         = 75 Hollow Synth   - 98 Music Saw
-    98, # 85 Lead 5 (charang)       = 75 Hollow Synth   - 98 Music Saw
+    81, # 81 Lead 1 (square)        = 62 Synth Bass 1   - 81 Wood Bass 2
+    68, # 82 Lead 2 (sawtooth)      = 73 Synth Bass 2   - 68 Synth Bass 1
+    53, # 83 Lead 3 (calliope)      = 77 Daybreak       - 53 Harpischord 2
+    46, # 84 Lead 4 (chiff)         = 76 Soft Cloud     - 46 Jug
+    69, # 85 Lead 5 (charang)       = 79 Arabesque      - 69 Rock Guitar
     96, # 86 Lead 6 (voice)         = 52 Human Vox      - 96 Human Chorus
-    98, # 87 Lead 7 (fifths)        = 75 Hollow Synth   - 98 Music Saw
-    98, # 88 Lead 8 (bass + lead)   = 75 Hollow Synth   - 98 Music Saw
+    71, # 87 Lead 7 (fifths)        = 89 Syntherimba    - 71 Pedal Stel Guitar
+    85, # 88 Lead 8 (bass + lead)   = 91 After Burner   - 85 Synth Reed 2
 ]
 
 PercussionLUT = {
@@ -134,7 +134,7 @@ for i, track in enumerate(mid.tracks):
     for msg in track:
         if msg.type in ('note_on', 'note_off') and msg.channel == 9:  # Channel 10 (0-indexed)
             if msg.note in PercussionLUT:
-                print(f'Remapping percussion note {msg.note} to {PercussionLUT[msg.note]}')
+                #print(f'Remapping percussion note {msg.note} to {PercussionLUT[msg.note]}')
                 msg.note = PercussionLUT[msg.note]  # Remap the note number
         if msg.type == 'program_change':  # Look for instrument change events
             if (msg.program < len(InstrumentLUT)):
