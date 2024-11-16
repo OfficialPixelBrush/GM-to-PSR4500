@@ -1,4 +1,5 @@
 import sys
+import os
 from mido import MidiFile, MidiTrack, Message
 
 # Load the MIDI file specified by the first command-line argument
@@ -124,7 +125,7 @@ PercussionLUT = {
     48: 53, # 48 High Tom 2     -> 53 High Tom
     49: 60, # 49 Crash Cymbal 1 -> 60 Crash Cymbal
     50: 43, # 50 High Tom 1     -> 43 High Synth Tom
-    51: 64, # 51 Ride Cymbal 1  -> Ride Symbal
+    51: 64, # 51 Ride Cymbal 1  -> 64 Ride Symbal
 }
 
 # Iterate over tracks to find and remap instrument change messages
@@ -140,11 +141,8 @@ for i, track in enumerate(mid.tracks):
                 print(f'Remapping instrument from {msg.program} to {InstrumentLUT[msg.program]}')
                 msg.program = InstrumentLUT[msg.program]  # Change instrument
             else:
-            #print(str(msg.hex()) + " - " + str(msg.program))# = 0
-                msg.program = 3
-
-        # Print the message
-        #print(msg)
+                print(f'Unknown instrument {msg.program}, assigning Sine Wave')
+                msg.program = 98
 
 # Save the modified MIDI file
-mid.save(sys.argv[1]+'_remapped')
+mid.save(os.path.basename(sys.argv[1]))
