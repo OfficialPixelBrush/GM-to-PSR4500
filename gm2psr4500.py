@@ -136,13 +136,16 @@ for i, track in enumerate(mid.tracks):
             if msg.note in PercussionLUT:
                 #print(f'Remapping percussion note {msg.note} to {PercussionLUT[msg.note]}')
                 msg.note = PercussionLUT[msg.note]  # Remap the note number
+            else:
+                # Workaround while some sounds aren't accounted for
+                msg.velocity = 0
         if msg.type == 'program_change':  # Look for instrument change events
             if (msg.program < len(InstrumentLUT)):
                 print(f'Remapping instrument from {msg.program} to {InstrumentLUT[msg.program]}')
                 msg.program = InstrumentLUT[msg.program]  # Change instrument
             else:
-                print(f'Unknown instrument {msg.program}, assigning Sine Wave')
-                msg.program = 98
+                print(f'Unknown instrument {msg.program}, assigning Piano')
+                msg.program = 3
 
 # Save the modified MIDI file
 mid.save(os.path.basename(sys.argv[1]))
