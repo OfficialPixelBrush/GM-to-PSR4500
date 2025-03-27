@@ -8,7 +8,7 @@
 3. Hold the MIDI Button down
 4. Press VOICE SELECT number "0" to put the Keyboard into Standard Voice Mode
 5. Press VOICE SELECT number "9" to set which Channel is the Rhymth Channel
-6. Press Key E1 to select voice 10 (though this can vary on some Midi Tracks)
+6. Press Key A1 to select voice 10 (though this can vary on some Midi Tracks)
 
 For more info, consult the Yamaha PSR-4500 Manual.
 
@@ -20,7 +20,7 @@ python3 ./gm2psr4500.py midis/test.mid
 This will place the converted file into the directory where the Python file is.
 
 ## Playing the file back
-First need to determine the port that your Keyboard is accessibly through, which can be found out via `aconnect` on Linux.
+First need to determine the port that your Keyboard is accessible through, which can be found out via `aconnect` on Linux.
 ```bash
 aconnect -l
 ```
