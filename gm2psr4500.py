@@ -25,14 +25,14 @@ InstrumentLUT = [
      7, # 12 Vibraphone             = 09 Vibes          - 07 Vibraphone
      8, # 13 Marimba                = 13/08 Marimba
     59, # 14 Xylophone              = 08/59 Xylophone
-    62, # 15 Tubular Bells          = 18 Gamelan        - 62 Tubular Bells
-     0, # 16 Dulcimer               = -
+    62, # 15 Tubular Bells          = 11 Chimes         - 62 Tubular Bells
+     4, # 16 Dulcimer               = 05 Harpsichord    - 04 Harpsichord 1
     # Organ
     29, # 17 Drawbar Organ          = 48 Pipe Organ     - 29 Pipe Organ 2
-    29, # 18 Percussive Organ       = 48 Pipe Organ     - 29 Pipe Organ 2
-    27, # 19 Rock Organ             = 50/27 Rock Organ
+    27, # 18 Percussive Organ       = 50 Rock Organ     - 27 Rock Organ
+    27, # 19 Rock Organ             = 50 Rock Organ     - 27 Rock Organ
     29, # 20 Church Organ           = 48 Pipe Organ     - 29 Pipe Organ 2
-    29, # 21 Reed Organ             = 48 Pipe Organ     - 29 Pipe Organ 2
+    49, # 21 Reed Organ             = 51 Street Organ   - 49 Reed Organ
     31, # 22 Accordion              = 37/31 Accordion
     22, # 23 Harmonica              = 37/22 Harmonica
     31, # 24 Tango Accordion        = 37/31 Accordion
@@ -42,7 +42,7 @@ InstrumentLUT = [
     12, # 27 Electric Guitar (jazz) = 57/12 Jazz Guitar
     68, # 28 Electric Guitar (clean)= 58 Rock Guitar    - 68 Rock Guitar 2
     70, # 29 Electric Guitar (muted)= 60 Mute Guitar    - 70 Rock Guitar 4
-    69, # 30 Overdriven Guitar      = 58 Rock Guitar    - 69 Rock Guitar 3
+    68, # 30 Overdriven Guitar      = 58 Rock Guitar    - 68 Rock Guitar 3
     13, # 31 Distortion Guitar      = 58 Rock Guitar    - 13 Rock Guitar 1 (Dist)
     69, # 32 Guitar harmonics       = 58 Rock Guitar    - 69 Rock Guitar 3
     # Bass
@@ -66,11 +66,11 @@ InstrumentLUT = [
     # Strings (continued)
     41, # 49 String Ensemble 1      = 20/41 Strings 1
     50, # 50 String Ensemble 2      = 21/50 Strings 2
-    11, # 51 Synth Strings 1        = 23 Synth Strings 1- 51 Synth Strings
-    11, # 52 Synth Strings 2        = 24 Synth Strings 2- 11 Violin 2
+    51, # 51 Synth Strings 1        = 23 Synth Strings 1- 51 Synth Strings
+    67, # 52 Synth Strings 2        = 24 Synth Strings 2- 67 Violin 2
     94, # 53 Choir Aahs             = 52 Human Vox      - 94 Human Voice 1
-    94, # 54 Voice Oohs             = 52 Human Vox      - 94 Human Voice 1
-    94, # 55 Synth Voice            = 52 Human Vox      - 94 Human Voice 1
+    95, # 54 Voice Oohs             = 53 Husky          - 95 Human Voice 2
+    96, # 55 Synth Voice            = 52 Human Vox      - 96 Human Chorus
     90, # 56 Orchestra Hit          = 99/90 Orchestra Hit
     # Brass
     15, # 57 Trumpet                = 39/15 Trumpet
@@ -84,11 +84,11 @@ InstrumentLUT = [
     # Reed
     18, # 65 Soprano Sax            = 34 Saxophone 1    - 18 Sax
     18, # 66 Alto Sax               = 34 Saxophone 1    - 18 Sax
-    18, # 67 Tenor Sax              = 34 Saxophone 1    - 18 Sax
-    18, # 68 Baritone Sax           = 34 Saxophone 1    - 18 Sax
+    42, # 67 Tenor Sax              = 35 Saxophone 2    - 42 Alpenhorn
+    42, # 68 Baritone Sax           = 35 Saxophone 2    - 42 Alpenhorn
     21, # 69 Oboe                   = 32/21 Oboe
     17, # 70 English Horn           = 42/17 Horn
-    92, # 71 Bassoon                = 33 Basson         - 97 Kazoo
+    97, # 71 Bassoon                = 33 Basson         - 97 Kazoo
     19, # 72 Clarinet               = 31/19 Clarinet
     # Pipe
     20, # 73 Piccolo                = 28/20 Flute
@@ -96,18 +96,27 @@ InstrumentLUT = [
     88, # 75 Recorder               = 30/88 Recorder
     47, # 76 Pan Flute              = 29/47 Pan Flute
     46, # 77 Blown Bottle           = 76 Soft Cloud - 46 Jug
-     3, # 78 Shakuhachi             = -
-    92, # 79 Whistle                = 54/23 Whistle
-    89, # 80 Ocarina                = 54 Whistle - 89 Ocarina
+    46, # 78 Shakuhachi             = 76 Soft Cloud - 46 Jug
+    23, # 79 Whistle                = 54/23 Whistle
+    23, # 80 Ocarina                = 54 Whistle - 89 Ocarina
     # Synth Lead
-    81, # 81 Lead 1 (square)        = 62 Synth Bass 1   - 81 Wood Bass 2
-    68, # 82 Lead 2 (sawtooth)      = 73 Synth Bass 2   - 68 Synth Bass 1
+    81, # 81 Lead 1 (square)        = 72 Synth Bass 1   - 81 Wood Bass 2
+    58, # 82 Lead 2 (sawtooth)      = 73 Synth Bass 2   - 58 Synth Bass 1
     53, # 83 Lead 3 (calliope)      = 77 Daybreak       - 53 Harpischord 2
     46, # 84 Lead 4 (chiff)         = 76 Soft Cloud     - 46 Jug
     69, # 85 Lead 5 (charang)       = 79 Arabesque      - 69 Rock Guitar
     96, # 86 Lead 6 (voice)         = 52 Human Vox      - 96 Human Chorus
     71, # 87 Lead 7 (fifths)        = 89 Syntherimba    - 71 Pedal Stel Guitar
-    85, # 88 Lead 8 (bass + lead)   = 91 After Burner   - 85 Synth Reed 2
+    56, # 88 Lead 8 (bass + lead)   = 78 Sunbeam        - 56 Bandneon
+    # Synth Pad
+     5, # 89 Pad 1 (new age)        = 03/05 Electric Piano
+    99, # 90 Pad 2 (warm)           = 81 Landscape      - 99 Sine Wave
+    85, # 91 Pad 3 (polysynth)      = 91 After Burner   - 85 Synth Reed 2
+    95, # 92 Pad 4 (choir)          = 53 Husky          - 95 Human Voice 2
+    63, # 93 Pad 5 (bowed)          = 85 Glass Bell 2   - 63 Hand Bell
+    45, # 94 Pad 6 (metallic)       = 82 Metallic       - 45 Synth Reed
+    55, # 95 Pad 7 (halo)           = 90 African Percuss- 55 Glass Celesta
+    53, # 96 Pad 8 (sweep)          = 77 Daybreak       - 53 Harpiscord 2
 ]
 
 PercussionLUT = {
@@ -138,7 +147,7 @@ for i, track in enumerate(mid.tracks):
                 msg.note = PercussionLUT[msg.note]  # Remap the note number
             else:
                 # Workaround while some sounds aren't accounted for
-                msg.velocity = 0
+                msg.note = 38
         if msg.type == 'program_change':  # Look for instrument change events
             if (msg.program < len(InstrumentLUT)):
                 print(f'Remapping instrument from {msg.program} to {InstrumentLUT[msg.program]}')

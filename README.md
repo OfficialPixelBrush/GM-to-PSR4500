@@ -30,3 +30,12 @@ Then you can simply use `aplaymidi` to play the file back.
 ```bash
 aplaymidi -p [port] test.mid
 ```
+
+## Adding more instruments
+**Important Note**: LMMS and the official General Midi spec indexes it's Midi Instruments with 1, while the PSR-4500 and most code interacting with the data start at 0!
+
+The formatting I've tried to maintain in the code is laid out as follows.
+```
+New instrument number, # (GM Instrument) =  (PSR-4500 Name) - (Midi In/Out Name)
+```
+This way it can easily be found out what instrument maps to what else.
